@@ -71,6 +71,27 @@ public class Pokemon {
     }
 
     /**
+     * Create a new Pokemon with given values.
+     * <p>
+     * Constructs a new Pokemon with a 6-sided die, 20-sided die, 0 hit points, attack level of 0,
+     * defense level of 0, and an empty name.
+     * @param hp the amount of hit points to give the Pokemon
+     * @param atk the attack level to give the Pokemon
+     * @param def the defense level to give the Pokemon
+     * @param name0 the name to give the Pokemon
+     */
+    public Pokemon(final int hp, final int atk, final int def, final String name0) {
+        final int d6num = 6;
+        final int d20num = 20;
+        this.d6 = new Dice(d6num);
+        this.d20 = new Dice(d20num);
+        this.hitPoints = hp;
+        this.attackLevel = atk;
+        this.defenseLevel = def;
+        this.name = name0;
+    }
+
+    /**
      * Attack another Pokemon.
      * <p>
      * Calling this method will cause this Pokemon to attack another Pokemon as follows:
